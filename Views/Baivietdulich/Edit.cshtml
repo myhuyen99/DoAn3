@@ -1,0 +1,61 @@
+@model DoAn3.Models.Baivietdulich
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Baivietdulich</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BvdlMa" />
+            <div class="form-group">
+                <label asp-for="BvdlNoidung" class="control-label"></label>
+                <input asp-for="BvdlNoidung" class="form-control" />
+                <span asp-validation-for="BvdlNoidung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BvdlLuotthich" class="control-label"></label>
+                <input asp-for="BvdlLuotthich" class="form-control" />
+                <span asp-validation-for="BvdlLuotthich" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BvdlMaqt" class="control-label"></label>
+                <select asp-for="BvdlMaqt" class="form-control" asp-items="ViewBag.BvdlMaqt"></select>
+                <span asp-validation-for="BvdlMaqt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BvdlMadddl" class="control-label"></label>
+                <select asp-for="BvdlMadddl" class="form-control" asp-items="ViewBag.BvdlMadddl"></select>
+                <span asp-validation-for="BvdlMadddl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BvdlMatt" class="control-label"></label>
+                <select asp-for="BvdlMatt" class="form-control" asp-items="ViewBag.BvdlMatt"></select>
+                <span asp-validation-for="BvdlMatt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BvdlMahinhanh" class="control-label"></label>
+                <select asp-for="BvdlMahinhanh" class="form-control" asp-items="ViewBag.BvdlMahinhanh"></select>
+                <span asp-validation-for="BvdlMahinhanh" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BvdlMabdg" class="control-label"></label>
+                <select asp-for="BvdlMabdg" class="form-control" asp-items="ViewBag.BvdlMabdg"></select>
+                <span asp-validation-for="BvdlMabdg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

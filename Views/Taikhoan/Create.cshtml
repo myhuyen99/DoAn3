@@ -1,0 +1,45 @@
+@model DoAn3.Models.Taikhoan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Taikhoan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TkMa" class="control-label"></label>
+                <input asp-for="TkMa" class="form-control" />
+                <span asp-validation-for="TkMa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TkEmail" class="control-label"></label>
+                <input asp-for="TkEmail" class="form-control" />
+                <span asp-validation-for="TkEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TkMatkhau" class="control-label"></label>
+                <input asp-for="TkMatkhau" class="form-control" />
+                <span asp-validation-for="TkMatkhau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TkHoten" class="control-label"></label>
+                <input asp-for="TkHoten" class="form-control" />
+                <span asp-validation-for="TkHoten" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

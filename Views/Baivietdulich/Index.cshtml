@@ -1,0 +1,71 @@
+@model IEnumerable<DoAn3.Models.Baivietdulich>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlNoidung)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlLuotthich)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlMabdgNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlMadddlNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlMahinhanhNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlMaqtNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BvdlMattNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlNoidung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlLuotthich)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlMabdgNavigation.BdgMa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlMadddlNavigation.DddlMa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlMahinhanhNavigation.HaMa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlMaqtNavigation.QtMa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BvdlMattNavigation.TtMa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BvdlMa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BvdlMa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BvdlMa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

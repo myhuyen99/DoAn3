@@ -1,0 +1,36 @@
+@model DoAn3.Models.Baidanhgia
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Baidanhgia</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BdgNoidung)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BdgNoidung)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BdgLuotthich)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BdgLuotthich)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BdgTkNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BdgTkNavigation.TkMa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BdgMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

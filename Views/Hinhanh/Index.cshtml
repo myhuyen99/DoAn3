@@ -1,0 +1,41 @@
+@model IEnumerable<DoAn3.Models.Hinhanh>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HaTen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HaUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HaTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HaUrl)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.HaMa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.HaMa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.HaMa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
