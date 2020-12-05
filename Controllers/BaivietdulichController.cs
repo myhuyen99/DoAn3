@@ -11,12 +11,7 @@ namespace DoAn3.Controllers
 {
     public class BaivietdulichController : Controller
     {
-        private readonly acomptec_dulichTHContext _context;
-
-        public BaivietdulichController(acomptec_dulichTHContext context)
-        {
-            _context = context;
-        }
+        private readonly acomptec_dulichTHContext _context= new acomptec_dulichTHContext ();
 
         // GET: Baivietdulich
         public async Task<IActionResult> Index()

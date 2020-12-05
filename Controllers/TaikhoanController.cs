@@ -11,12 +11,7 @@ namespace DoAn3.Controllers
 {
     public class TaikhoanController : Controller
     {
-        private readonly acomptec_dulichTHContext _context;
-
-        public TaikhoanController(acomptec_dulichTHContext context)
-        {
-            _context = context;
-        }
+        private readonly acomptec_dulichTHContext _context= new acomptec_dulichTHContext ();
 
         // GET: Taikhoan
         public async Task<IActionResult> Index()

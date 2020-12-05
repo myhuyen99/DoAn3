@@ -11,12 +11,7 @@ namespace DoAn3.Controllers
 {
     public class QuantriController : Controller
     {
-        private readonly acomptec_dulichTHContext _context;
-
-        public QuantriController(acomptec_dulichTHContext context)
-        {
-            _context = context;
-        }
+        private readonly acomptec_dulichTHContext _context= new acomptec_dulichTHContext ();
 
         // GET: Quantri
         public async Task<IActionResult> Index()

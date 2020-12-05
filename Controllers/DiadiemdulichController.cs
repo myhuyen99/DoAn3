@@ -11,12 +11,7 @@ namespace DoAn3.Controllers
 {
     public class DiadiemdulichController : Controller
     {
-        private readonly acomptec_dulichTHContext _context;
-
-        public DiadiemdulichController(acomptec_dulichTHContext context)
-        {
-            _context = context;
-        }
+        private readonly acomptec_dulichTHContext _context= new acomptec_dulichTHContext ();
 
         // GET: Diadiemdulich
         public async Task<IActionResult> Index()

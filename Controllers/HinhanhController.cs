@@ -11,12 +11,7 @@ namespace DoAn3.Controllers
 {
     public class HinhanhController : Controller
     {
-        private readonly acomptec_dulichTHContext _context;
-
-        public HinhanhController(acomptec_dulichTHContext context)
-        {
-            _context = context;
-        }
+        private readonly acomptec_dulichTHContext _context= new acomptec_dulichTHContext ();
 
         // GET: Hinhanh
         public async Task<IActionResult> Index()
